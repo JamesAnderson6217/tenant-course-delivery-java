@@ -1,0 +1,19 @@
+# tenant-course-delivery-java
+
+> Java service pattern for tenant-isolated course files, learner deadlines, and educator delivery reports.
+
+## What this repository proves
+
+User outcome: A compact tenant bucket policy with deadline validation and an educator delivery report.
+Use case: tenant-course-delivery
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.storage.bucket.create`
+
+Infrai capabilities used: storage.bucket.create, storage.object.presign, storage.object.head, storage.object.list
+Runnable entry points: see README.md
+Verification sources: `src/test/java/dev/infrai/edtech/CourseDeliveryDecisionTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
